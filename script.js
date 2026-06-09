@@ -1,32 +1,30 @@
-// Elements
-const themeToggle = document.getElementById('theme-toggle');
-const clickMeBtn = document.getElementById('click-me');
-const message = document.getElementById('message');
+// DOM Elements
+const commandButtons = document.querySelectorAll('.term-cmd');
+const terminalOutput = document.getElementById('terminal-output');
+const secretBtn = document.getElementById('secret-btn');
 
-// Check for saved theme preference on load
-const currentTheme = localStorage.getItem('theme');
-if (currentTheme) {
-    document.documentElement.setAttribute('data-theme', currentTheme);
-    if (currentTheme === 'dark') {
-        themeToggle.textContent = '☀️ Light Mode';
-    }
-}
+// Object containing data matching commands
+const responses = {
+    skills: `> Loading Sai's stack...\n[■■■■■■■■■□] JavaScript / HTML / CSS\n[■■■■■■■■□□] UI Architecture\n[■■■■■■■□□□] Git & Deployments`,
+    projects: `> Fetching live repositories...\n• Project Alpha - High speed deployment hub\n• Grid System - Beautiful web layouts\n• Terminal Widget - Currently running live here!`,
+    clear: ""
+};
 
-// Toggle Theme Function
-themeToggle.addEventListener('click', () => {
-    let theme = document.documentElement.getAttribute('data-theme');
-    if (theme === 'dark') {
-        document.documentElement.setAttribute('data-theme', 'light');
-        themeToggle.textContent = '🌙 Dark Mode';
-        localStorage.setItem('theme', 'light');
-    } else {
-        document.documentElement.setAttribute('data-theme', 'dark');
-        themeToggle.textContent = '☀️ Light Mode';
-        localStorage.setItem('theme', 'dark');
-    }
+// Handle Terminal Command Clicks
+commandButtons.forEach(button => {
+    button.addEventListener('click', () => {
+        const command = button.getAttribute('data-cmd');
+        
+        if (command === 'clear') {
+            terminalOutput.textContent = '';
+        } else {
+            // Display chosen text instantly or clear previous first
+            terminalOutput.textContent = responses[command];
+        }
+    });
 });
 
-// Reveal Hidden Message Function
-clickMeBtn.addEventListener('click', () => {
-    message.classList.toggle('hidden');
+// Fun Easter Egg Button Click
+secretBtn.addEventListener('click', () => {
+    alert("🌌 Matrix Easter Egg: You found Sai's secret repository configuration! Keep exploring.");
 });
