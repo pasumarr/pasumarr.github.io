@@ -3,26 +3,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My GitHub Pages Site</title>
+    <title>Sai // Digital Space</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <div class="logo">🚀 MySpace</div>
-        <button id="theme-toggle">🌙 Dark Mode</button>
-    </header>
+    <div class="background-glow"></div>
 
-    <main>
+    <nav>
+        <div class="logo">sai<span>.dev</span></div>
+        <div class="status-tag">🟢 Available for Projects</div>
+    </nav>
+
+    <main class="container">
         <section class="hero">
-            <h1>Welcome to My Website!</h1>
-            <p>This is a starter template deployed using GitHub Pages. Edit these files to make it your own personal portfolio, blog, or landing page.</p>
-            <button id="click-me" class="btn">Click Me!</button>
-            <p id="message" class="hidden">🎉 Awesome! Your JavaScript file is working perfectly.</p>
+            <div class="hero-text">
+                <h1>Hi, I'm <span class="highlight">Sai</span>.</h1>
+                <p class="subtitle">Building clean code, breaking paradigms, and creating interactive experiences on the web.</p>
+                <div class="cta-group">
+                    <a href="#contact" class="btn primary">Get in Touch</a>
+                    <button id="secret-btn" class="btn secondary">?</button>
+                </div>
+            </div>
+
+            <div class="terminal">
+                <div class="terminal-header">
+                    <span class="dot red"></span>
+                    <span class="dot yellow"></span>
+                    <span class="dot green"></span>
+                    <span class="title">sai@universe: ~</span>
+                </div>
+                <div class="terminal-body">
+                    <p class="line animate-1">✓ Environment loaded successfully.</p>
+                    <p class="line animate-2">👉 Type a command below or click a quick link:</p>
+                    <div class="terminal-links">
+                        <button class="term-cmd" data-cmd="skills">/skills</button>
+                        <button class="term-cmd" data-cmd="projects">/projects</button>
+                        <button class="term-cmd" data-cmd="clear">/clear</button>
+                    </div>
+                    <div id="terminal-output"></div>
+                </div>
+            </div>
         </section>
     </main>
 
     <footer>
-        <p>&copy; 2026 Created by Me. Hosted on GitHub Pages.</p>
+        <p>&copy; 2026 Sai. Built with speed and precision.</p>
     </footer>
 
     <script src="script.js"></script>
