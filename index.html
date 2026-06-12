@@ -3,52 +3,60 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sai // Digital Space</title>
+    <title>Sai</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="background-glow"></div>
 
     <nav>
-        <div class="logo">sai<span>.dev</span></div>
-        <div class="status-tag">🟢 Available for Projects</div>
+        <div class="nav-container">
+            <a href="#" class="nav-logo">Sai</a>
+            <div class="nav-links">
+                <a href="#" class="active">Home</a>
+                <a href="#projects">Projects</a>
+                <button id="theme-toggle" aria-label="Toggle Theme">🌓</button>
+            </div>
+        </div>
     </nav>
 
-    <main class="container">
-        <section class="hero">
-            <div class="hero-text">
-                <h1>Hi, I'm <span class="highlight">Sai</span>.</h1>
-                <p class="subtitle">Building clean code, breaking paradigms, and creating interactive experiences on the web.</p>
-                <div class="cta-group">
-                    <a href="#contact" class="btn primary">Get in Touch</a>
-                    <button id="secret-btn" class="btn secondary">?</button>
-                </div>
+    <main class="content-wrapper">
+        
+        <header class="hero-section">
+            <h1>Hi there! I'm <span class="typewriter-text">Sai</span><span class="cursor">|</span></h1>
+        </header>
+
+        <section class="profile-grid">
+            
+            <div class="profile-column">
+                <h2>About me:</h2>
+                <ul class="profile-list">
+                    <li><strong>Software Engineering</strong> student / enthusiast.</li>
+                    <li>Interested in web development, AI/ML, and building clean, scalable interactive applications.</li>
+                    <li>Passionate about design, technology, and turning complex ideas into simple code.</li>
+                </ul>
             </div>
 
-            <div class="terminal">
-                <div class="terminal-header">
-                    <span class="dot red"></span>
-                    <span class="dot yellow"></span>
-                    <span class="dot green"></span>
-                    <span class="title">sai@universe: ~</span>
-                </div>
-                <div class="terminal-body">
-                    <p class="line animate-1">✓ Environment loaded successfully.</p>
-                    <p class="line animate-2">👉 Type a command below or click a quick link:</p>
-                    <div class="terminal-links">
-                        <button class="term-cmd" data-cmd="skills">/skills</button>
-                        <button class="term-cmd" data-cmd="projects">/projects</button>
-                        <button class="term-cmd" data-cmd="clear">/clear</button>
-                    </div>
-                    <div id="terminal-output"></div>
-                </div>
+            <div class="profile-column">
+                <h2>Previously I've:</h2>
+                <ul class="profile-list">
+                    <li>
+                        <strong>Built Next-Gen Projects</strong> 
+                        <p class="item-desc">Developed responsive web interfaces and experimented with interactive user experiences.</p>
+                    </li>
+                    <li>
+                        <strong>Open Source Contributor</strong> 
+                        <p class="item-desc">Collaborated on version control workflows and streamlined static deployments on GitHub.</p>
+                    </li>
+                </ul>
             </div>
+
         </section>
-    </main>
 
-    <footer>
-        <p>&copy; 2026 Sai. Built with speed and precision.</p>
-    </footer>
+        <footer class="cta-section">
+            <a href="#projects" class="cta-link">See what else I've built <span class="arrow">→</span></a>
+        </footer>
+
+    </main>
 
     <script src="script.js"></script>
 </body>
